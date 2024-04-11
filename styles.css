@@ -3,14 +3,12 @@
 	padding: 0px;
 	box-sizing: border-box;
 }
-
 body {
 	font-family: 'Montserrat', sans-serif;
 	background-color: black;
 	color: white;
 	
 }
-
 h1, h2 {
 	text-align: center;
 	filter: drop-shadow(0px 0px 4px black);
@@ -18,7 +16,6 @@ h1, h2 {
 h1 {
 	padding: 40px;
 }
-
 p {
 	text-align: center;
 	font-size: 28px;
@@ -27,19 +24,17 @@ p {
 .bgimage {
 	position: absolute;
 	background-image: url("https://images.unsplash.com/photo-1506260408121-e353d10b87c7?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-	
-	filter: blur(.75vh);
-	
-	height: 100vh;
-	width: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	z-index: -1;
 	
+	filter: blur(.75vh);
 	opacity: 0.7;
 	
-	overflow: hidden;
+	height: 100vh;
+	width: 100%;
+	
+	z-index: -1;
 }
 
 .pouches-and-buttons {
@@ -47,9 +42,10 @@ p {
 	margin: auto;
 }
 
-/* Div of money pouch */
+/* Div of three coin inputs */
 .coinpouch {
 	width: 225px;
+	height: 325px;
 	padding: 1em;
 	border-radius: 20px;
 	
@@ -59,23 +55,23 @@ p {
 	display: inline-block;
 }
 
-/* Span of number + coin img */
+/* Span of number input + coin img */
 .coinlabel {
-	font-size: 48px;
+	font-size: 36px;
 }
-/* Input field */
+/* Individual coin input field */
 .coininput {
 	font-size: 20px;
+	text-align: right;
 	width: 96px;
 	height: 36px;
-	text-align: right;
 	padding: 8px;
-	color: white;
 	
 	border: 2px solid gray;
 	border-radius: 5px;
 	
 	background-color: rgba(0, 0, 0, 1);
+	color: white;
 	
 	vertical-align: middle;
 }
