@@ -27,10 +27,10 @@ const transfer_button = document.getElementById("transfer-btn");
 
 // -------------------------------------------------------------------------
 
-let result = 0
-let displayed_result = [0,0,0];
+let result = 0 // Working result, in copper value
+let displayed_result = [0,0,0]; // Result that is converted and displayed to the user
 
-// Parameter of 0 reads your_input, 1 reads add_input
+// Parameter of 0 reads your_input, 1 reads add_input. Respective input is returned as a copper value.
 function receiveInputAsCopper(field) {
 	let inp = 0;
 	for(let i = 0; i < 3; i++) {
@@ -38,7 +38,7 @@ function receiveInputAsCopper(field) {
 	}
 	
 	if(!inp && inp != 0) {
-		console.log(`Value of input field ${field} (of 0-1) is non-existent!\nError sent.`); // TODO update <p> above convert buttons to warn user
+		console.log(`Value of input field ${field} (of 0-1) is non-existent!\nError sent.`);
 		return("ERR_NO_VAL");
 	}
 	else {
@@ -46,6 +46,7 @@ function receiveInputAsCopper(field) {
 	}
 }
 
+// Calculation result is displayed on the page, depending on preferred highestConversion ("gold", "silver", or "copper")
 function updateResults(highestConversion, copperResult) {
 	let gold = 0;
 	let silver = 0;
@@ -62,10 +63,12 @@ function updateResults(highestConversion, copperResult) {
 	displayed_result = [copperResult, silver, gold];
 	resultnumbers_div.innerHTML = `${gold}<br/>${silver}<br/>${copperResult}<br/>`;
 }
+// Change the text of the error message element
 function changeErrCaseText(txt) {
 	errCaseText_p.textContent = txt;
 }
 
+// Calculates monetary sum/difference of "Your Coins" and "To Add/Subtr." 
 // Operation: 1 = add, -1 = subtract
 function addCoins(operation) {
 	let current = receiveInputAsCopper(0);
@@ -87,6 +90,7 @@ function addCoins(operation) {
 	}
 }
 
+// Moves the resulting calculation to your_input
 function transferToYourInput() {
 	for(let i = 0; i < 3; i++) {
 		your_input[i].value = displayed_result[i];
