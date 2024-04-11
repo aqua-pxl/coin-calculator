@@ -1,0 +1,230 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: black;
+	color: white;
+	
+}
+
+h1, h2 {
+	text-align: center;
+	filter: drop-shadow(0px 0px 4px black);
+}
+h1 {
+	padding: 40px;
+}
+
+p {
+	text-align: center;
+	font-size: 28px;
+}
+
+.bgimage {
+	position: absolute;
+	background-image: url("https://images.unsplash.com/photo-1506260408121-e353d10b87c7?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+	
+	filter: blur(.75vh);
+	
+	height: 100vh;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+	
+	opacity: 0.7;
+	
+	overflow: hidden;
+}
+
+.pouches-and-buttons {
+	width: 554px;
+	margin: auto;
+}
+
+/* Div of money pouch */
+.coinpouch {
+	width: 225px;
+	padding: 1em;
+	border-radius: 20px;
+	
+	vertical-align: middle;
+	text-align: center;
+	
+	display: inline-block;
+}
+
+/* Span of number + coin img */
+.coinlabel {
+	font-size: 48px;
+}
+/* Input field */
+.coininput {
+	font-size: 20px;
+	width: 96px;
+	height: 36px;
+	text-align: right;
+	padding: 8px;
+	color: white;
+	
+	border: 2px solid gray;
+	border-radius: 5px;
+	
+	background-color: rgba(0, 0, 0, 1);
+	
+	vertical-align: middle;
+}
+
+.inline {
+	vertical-align: sub;
+	height: 1em;
+}
+.shadow {
+	filter: drop-shadow(0px 0px 4px black);
+}
+.darkbg-white {
+	border: 2px solid white;
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, .5);
+}
+
+.operator-field {
+	text-align: center;
+	
+	vertical-align: middle;
+	
+	display: inline-block;
+}
+
+.operator-btn {
+	font-weight: bold;
+	font-size: 42px;
+	margin: 10px;
+	
+	width: 75px;
+	height: 75px;
+	border-radius: 100%;
+	border: none;
+	
+	color: white;
+	border: 2px solid white;
+}
+.operator-btn:hover {
+	background-color: rgba(0,0,0, 0.7);
+	color: white;
+	cursor: pointer;
+}
+.operator-btn:active {
+	background-color: gray;
+}
+
+
+
+.results {
+	width: 554px;
+	height: 285px;
+	
+	margin: auto;
+	margin-top: 25px;
+	
+}
+.results-divided {
+	width: 525px;
+	height: 110px;
+	
+	margin: auto;
+}
+.results-numbers {
+	display: inline-block;
+	
+	width: 49%;
+	height: 100%;
+	
+	text-align: right;
+	font-size: 28px;
+	
+	vertical-align: top;
+}
+.results-coins {
+	display: inline-block;
+	
+	margin-left: 1%;
+	width: 49%;
+	height: 100%;
+	
+	text-align: left;
+	font-size: 28px;
+	
+	vertical-align: top;
+}
+
+.convert-result-btns {
+	text-align: center;
+	margin: auto;
+}
+.convert-btn {
+	background-color: black;
+	border-radius: 30%;
+}
+.convert-btn:hover {
+	cursor: pointer;
+}
+
+.end-btn {
+	padding: 5px;
+	font-size: 18px;
+	margin-top: 5px;
+	
+	background-color: black;
+	color: white;
+	border: 2px solid gray;
+	border-radius: 10px;
+}
+.end-btn:hover {
+	cursor:pointer;
+	background-color: rgba(50,50,50,1);
+}
+.end-btn:active {
+	background-color: gray;
+}
+
+#err-case {
+	font-weight: bold;
+	color: rgb(255, 180, 180);
+}
+
+.whatisthis {
+	position:absolute;
+	right: 8px;
+	opacity: 0.3;
+	cursor: pointer;
+}
+
+#whatisthis {
+	bottom: 8px;
+	z-index: 1;
+}
+#whatisthis-msg {
+	width: 300px;
+	vertical-align: bottom;
+	text-align: left;
+	font-size: 16px;
+	bottom: 50px;
+	opacity: 0.8;
+	
+	z-index: 0;
+	
+	display: none;
+}
+
+#whatisthis:hover {
+	opacity: 0.8;
+}
+#whatisthis:hover + #whatisthis-msg {
+	display: block;
+}

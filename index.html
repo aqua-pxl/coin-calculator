@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="styles.css">
+		<title>Coin Calculator</title>
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		
+		<link rel="icon" href="images/gold_coin.png">
+	</head>
+	
+	<div class="bgimage"></div>
+	
+	<body>
+		<p class="whatisthis" id="whatisthis">What is this?</p>
+		<p class="whatisthis" id="whatisthis-msg"><b>If you found this randomly on GitHub and need context:</b><br/>This site is a coin conversion calculator built around a fictional currency where, out of copper, silver, and gold coins, one silver equals ten copper and one gold equals ten silver. It was built by me for personal use.<br/><br/><b>Credits:</b><br/>Coin graphics - Me!<br/>Background photo - Unsplash</p>
+		
+		<h1>Coin Conversion Calculator</h1>
+	
+		<div class="pouches-and-buttons">
+			<div class="coinpouch darkbg-white" id="pouch-left">
+				<h2>Your Coins</h2>
+				<br/>
+				<span class="coinlabel">
+					<input type="text" class="coininput" id="gold"> <img src='images/gold_coin.png' class="inline shadow">
+					<br/><br/>
+					<input type="text" class="coininput" id="silver"> <img src='images/silver_coin.png' class="inline shadow">
+					<br/><br/>
+					<input type="text" class="coininput" id="copper"> <img src='images/copper_coin.png' class="inline shadow">
+				</span>
+			</div>
+			
+			<div class="operator-field">
+				<button class="operator-btn darkbg-white" id="add-btn">+</button>
+				<br/><b>or</b><br/>
+				<button class="operator-btn darkbg-white" id="subt-btn">-</button>
+			</div>
+			
+			<div class="coinpouch darkbg-white" id="pouch-right">
+				<h2>To Add/Subtr.</h2>
+				<br/>
+				<span class="coinlabel">
+					<input type="text" class="coininput" id="gold1"> <img src='images/gold_coin.png' class="inline shadow">
+					<br/><br/>
+					<input type="text" class="coininput" id="silver1"> <img src='images/silver_coin.png' class="inline shadow">
+					<br/><br/>
+					<input type="text" class="coininput" id="copper1"> <img src='images/copper_coin.png' class="inline shadow">
+				</span>
+			</div>
+			
+		</div>
+		
+		<div class="results darkbg-white">
+			<h2 style="margin:10px;">Result:</h2>
+			
+			<div class="results-divided">
+				<div class="results-numbers" id="results-numbers">
+					0<br/>
+					0<br/>
+					0<br/>
+				</div>
+				<div class="results-coins">
+					<img src='images/gold_coin.png' class="inline shadow"><br/>
+					<img src='images/silver_coin.png' class="inline shadow"><br/>
+					<img src='images/copper_coin.png' class="inline shadow"><br/>
+				</div>
+			</div>
+
+			<p style="font-size:18px; margin-bottom:3px;" id="err-case"></p>
+			
+			<div class="convert-result-btns">
+				Convert result to:
+				<button class="convert-btn" id="goldc-btn"><img src='images/gold_coin.png' class="inline"></button>
+				<button class="convert-btn" id="silverc-btn"><img src='images/silver_coin.png' class="inline"></button>
+				<button class="convert-btn" id="copperc-btn"><img src='images/copper_coin.png' class="inline"></button>
+			</div>
+			
+			<div class="convert-result-btns" style="margin:10px;">
+				<button class="end-btn" id="transfer-btn">Transfer Results to "Your Coins"</button>
+			</div>
+			
+		</div>
+		
+		<script src="app.js"></script>
+		
+	</body>
+</html>
