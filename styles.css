@@ -20,7 +20,27 @@ p {
 	text-align: center;
 	font-size: 28px;
 }
+a {
+	color: blue;
+}
 
+/* Modifiers */
+.inline {
+	vertical-align: sub;
+	height: 1em;
+}
+
+.shadow {
+	filter: drop-shadow(0px 0px 4px black);
+}
+
+.darkbg-white {
+	border: 2px solid white;
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, .5);
+}
+
+/* Blurred background element */
 .bgimage {
 	position: absolute;
 	background-image: url("https://images.unsplash.com/photo-1506260408121-e353d10b87c7?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
@@ -37,12 +57,11 @@ p {
 	z-index: -1;
 }
 
+/* Coin input field classes */
 .pouches-and-buttons {
 	width: 554px;
 	margin: auto;
 }
-
-/* Div of three coin inputs */
 .coinpouch {
 	width: 225px;
 	height: 325px;
@@ -54,12 +73,9 @@ p {
 	
 	display: inline-block;
 }
-
-/* Span of number input + coin img */
 .coinlabel {
 	font-size: 36px;
 }
-/* Individual coin input field */
 .coininput {
 	font-size: 20px;
 	text-align: right;
@@ -76,19 +92,7 @@ p {
 	vertical-align: middle;
 }
 
-.inline {
-	vertical-align: sub;
-	height: 1em;
-}
-.shadow {
-	filter: drop-shadow(0px 0px 4px black);
-}
-.darkbg-white {
-	border: 2px solid white;
-	border-radius: 10px;
-	background-color: rgba(0, 0, 0, .5);
-}
-
+/* Addition/subtraction button classes */
 .operator-field {
 	text-align: center;
 	
@@ -96,7 +100,6 @@ p {
 	
 	display: inline-block;
 }
-
 .operator-btn {
 	font-weight: bold;
 	font-size: 42px;
@@ -119,8 +122,7 @@ p {
 	background-color: gray;
 }
 
-
-
+/* Result field classes */
 .results {
 	width: 554px;
 	height: 285px;
@@ -129,6 +131,7 @@ p {
 	margin-top: 25px;
 	
 }
+
 .results-divided {
 	width: 525px;
 	height: 110px;
@@ -194,33 +197,33 @@ p {
 	color: rgb(255, 180, 180);
 }
 
+/* "What is this?" message classes */
 .whatisthis {
 	position:absolute;
 	right: 8px;
 	opacity: 0.3;
 	cursor: pointer;
 }
-
 #whatisthis {
 	bottom: 8px;
 	z-index: 1;
 }
+#whatisthis:hover {
+	opacity: 0.8;
+}
+
 #whatisthis-msg {
 	width: 300px;
 	vertical-align: bottom;
 	text-align: left;
 	font-size: 16px;
-	bottom: 50px;
+	bottom: 42px;
 	opacity: 0.8;
 	
 	z-index: 0;
 	
 	display: none;
 }
-
-#whatisthis:hover {
-	opacity: 0.8;
-}
-#whatisthis:hover + #whatisthis-msg {
+#whatisthis:hover + #whatisthis-msg, #whatisthis-msg:hover {
 	display: block;
 }

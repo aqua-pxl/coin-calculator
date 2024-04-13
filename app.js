@@ -27,10 +27,11 @@ const transfer_button = document.getElementById("transfer-btn");
 
 // -------------------------------------------------------------------------
 
-let result = 0 // Working result, in copper value
+let result = 0 // Working result in copper value
 let displayed_result = [0,0,0]; // Result that is converted and displayed to the user
 
-// Parameter of 0 reads your_input, 1 reads add_input. Respective input is returned as a copper value.
+// Parameter of 0 reads your_input, 1 reads add_input.
+// Chosen input is returned as a copper value.
 function receiveInputAsCopper(field) {
 	let inp = 0;
 	for(let i = 0; i < 3; i++) {
@@ -52,13 +53,13 @@ function updateResults(highestConversion, copperResult) {
 	let silver = 0;
 	
 	switch (highestConversion) {
-			case "gold":
-				gold = (result >= 0)? Math.floor(copperResult/100):Math.ceil(copperResult/100);
-				copperResult -= gold*100;
-			case "silver":
-				silver = (result >= 0)? Math.floor(copperResult/10):Math.ceil(copperResult/10);
-				copperResult -= silver*10;
-		}
+		case "gold":
+			gold = (result >= 0)? Math.floor(copperResult/100):Math.ceil(copperResult/100);
+			copperResult -= gold*100;
+		case "silver":
+			silver = (result >= 0)? Math.floor(copperResult/10):Math.ceil(copperResult/10);
+			copperResult -= silver*10;
+	}
 	
 	displayed_result = [copperResult, silver, gold];
 	resultnumbers_div.innerHTML = `${gold}<br/>${silver}<br/>${copperResult}<br/>`;
@@ -68,8 +69,9 @@ function changeErrCaseText(txt) {
 	errCaseText_p.textContent = txt;
 }
 
-// Calculates monetary sum/difference of "Your Coins" and "To Add/Subtr." 
-// Operation: 1 = add, -1 = subtract
+// Calculates monetary sum/difference of "Your Coins" and "To Add/Subtr." fields
+// Also handles displaying error text, depending on the results of input retrieval
+// operation: 1 = add, -1 = subtract
 function addCoins(operation) {
 	let current = receiveInputAsCopper(0);
 	let toAdd = receiveInputAsCopper(1);
@@ -90,7 +92,7 @@ function addCoins(operation) {
 	}
 }
 
-// Moves the resulting calculation to your_input
+// Moves the resulting calculation to your_input and clears add_input
 function transferToYourInput() {
 	for(let i = 0; i < 3; i++) {
 		your_input[i].value = displayed_result[i];
@@ -98,6 +100,7 @@ function transferToYourInput() {
 	}
 }
 
+// Adding relevant functions to their respective buttons
 add_button.addEventListener('click', ()=>{addCoins(1)});
 subt_button.addEventListener('click', ()=>{addCoins(-1)});
 

@@ -16,7 +16,7 @@ This button will also empty the "To Add/Subtr." values.
 
 # Edge Cases
 Respective warnings will be given if either:
-a) An input field read something other than a number, or
-b) A calculation has a negative result.
+a: An input field read something other than a number, or
+b: A calculation has a negative result.
 
 Additionally, decimal values will automatically be rounded down to an integer value.

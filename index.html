@@ -4,24 +4,27 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="styles.css">
-		<title>Coin Calculator</title>
 		
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		
+		<title>Coin Calculator</title>
 		<link rel="icon" href="images/gold_coin.png">
 	</head>
 	
 	<div class="bgimage"></div>
 	
 	<body>
+		<!-- Additional info -->
 		<p class="whatisthis" id="whatisthis">What is this?</p>
-		<p class="whatisthis" id="whatisthis-msg"><b>If you found this randomly on GitHub and need context:</b><br/>This site is a coin conversion calculator built around a fictional currency where, out of copper, silver, and gold coins, one silver equals ten copper and one gold equals ten silver. It was built by me for personal use.<br/><br/><b>Credits:</b><br/>Coin graphics - Me!<br/>Background photo - Unsplash</p>
+		<p class="whatisthis" id="whatisthis-msg"><b>If you found this randomly on GitHub and need context:</b><br/>This is a currency conversion calculator built by <a href="https://github.com/orbbyos/">me</a> for personal use. It operates with a fictional currency that consists of copper, silver, and gold coins, each with their own conversion rates (10 copper = 1 silver, and 10 silver = 1 gold).<br/><br/><b>Credits:</b><br/>Coin graphics - Me!<br/>Background photo - Unsplash</p>
 		
 		<h1>Coin Conversion Calculator</h1>
 	
 		<div class="pouches-and-buttons">
+		
+			<!-- "Your Coins" input field -->
 			<div class="coinpouch darkbg-white" id="pouch-left">
 				<h2>Your Coins</h2>
 				<br/>
@@ -34,12 +37,14 @@
 				</span>
 			</div>
 			
+			<!-- Add/Subtract buttons -->
 			<div class="operator-field">
 				<button class="operator-btn darkbg-white" id="add-btn">+</button>
 				<br/><b>or</b><br/>
 				<button class="operator-btn darkbg-white" id="subt-btn">-</button>
 			</div>
 			
+			<!-- "To Add/Subtr." input field -->
 			<div class="coinpouch darkbg-white" id="pouch-right">
 				<h2>To Add/Subtr.</h2>
 				<br/>
@@ -54,9 +59,11 @@
 			
 		</div>
 		
+		<!-- Results section -->
 		<div class="results darkbg-white">
 			<h2 style="margin:10px;">Result:</h2>
 			
+			<!-- Mid-aligned number & coin display -->
 			<div class="results-divided">
 				<div class="results-numbers" id="results-numbers">
 					0<br/>
@@ -72,6 +79,7 @@
 
 			<p style="font-size:18px; margin-bottom:3px;" id="err-case"></p>
 			
+			<!-- Coin conversion buttons -->
 			<div class="convert-result-btns">
 				Convert result to:
 				<button class="convert-btn" id="goldc-btn"><img src='images/gold_coin.png' class="inline"></button>
@@ -79,6 +87,7 @@
 				<button class="convert-btn" id="copperc-btn"><img src='images/copper_coin.png' class="inline"></button>
 			</div>
 			
+			<!-- Transfer result button -->
 			<div class="convert-result-btns" style="margin:10px;">
 				<button class="end-btn" id="transfer-btn">Transfer Results to "Your Coins"</button>
 			</div>
